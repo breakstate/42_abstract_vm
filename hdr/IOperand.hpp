@@ -25,10 +25,16 @@ template <class T>
 class Operator : public IOperand {
 
 public:
+
+    Operator( void );
+    ~Operator( void );
+    Operator( const Operator & srcObj );
+    Operator & operator=( Operator const & srcObj );
+    
 // constructor takes precision, type, value, string
-    T    value;
-    std::string type;
-    int     precision;
+    //T    value;
+    //std::string type;
+    //int     precision;
 
 protected:
 
