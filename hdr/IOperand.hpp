@@ -21,6 +21,21 @@ public:
     virtual ~IOperand( void ) {}
 };
 
+template <class T> 
+class Operator : public IOperand {
+
+public:
+// constructor takes precision, type, value, string
+    T    value;
+    std::string type;
+    int     precision;
+
+protected:
+
+private:
+
+};
+/*
 class Int8 : public IOperand {
 
 public:
@@ -85,5 +100,5 @@ protected:
 private:
 
 };
-
+*/
 #endif
