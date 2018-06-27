@@ -3,7 +3,9 @@
 # include "IOperand.hpp"
 # include "Type.hpp"
 
-class Factory {
+// Factory class purpose is to create and return operand objects
+
+class Factory { 
 
 public:
 	Factory( void );
