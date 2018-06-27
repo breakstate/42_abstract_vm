@@ -9,5 +9,7 @@ int		main()
 	
 	std::cout << first.value << std::endl;
 	std::cout << second.value << std::endl;
+
+	std::cout << second.val() << std::endl;
 	return (0);
 }

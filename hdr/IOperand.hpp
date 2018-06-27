@@ -38,8 +38,8 @@ public:
     std::string type;
     int     precision;
 
-    void val( void ) {
-        return this->value;
+    std::string val( void ) {
+        return (std::to_string(this->value));
     }
     /*IOperand const * operator+( IOperand const & rhs ) const {
         Operator *test;//(0, "int", 0);
