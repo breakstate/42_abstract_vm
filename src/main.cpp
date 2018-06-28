@@ -10,6 +10,6 @@ int		main()
 	std::cout << first.value << std::endl;
 	std::cout << second.value << std::endl;
 
-	std::cout << second.val() << std::endl;
+	std::cout << second.toString() << std::endl;
 	return (0);
 }
