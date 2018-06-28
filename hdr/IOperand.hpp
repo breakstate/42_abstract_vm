@@ -39,16 +39,16 @@ public:
     int     precision;
 
     std::string const & toString( void ) const {
-		std :: string *ret = new std::string(std::to_string(this->value));
+		std::string *ret = new std::string(std::to_string(this->value));
         return (*ret);
     }
-    /*IOperand const * operator+( IOperand const & rhs ) const {
-        Operator *test;//(0, "int", 0);
-        test = new Operator(0, "int", 0);
-        test->value = this->value + std::stoi(rhs.toString());
+    IOperand const * operator+( IOperand const & rhs ) const {
+        Operator <T> *test;
+        test = new Operator(this->value + std::stoi(rhs.toString()) , "int", 0);
+        //test->value = this->value + std::stoi(rhs.toString());
         std::cout << test->value << std::endl;
         return (test);
-    }*/
+    }
     /*std::string const & toString( void ) const {
         std::string strVal = std::to_string(this->value);
         std::cout << strVal << std::endl;
