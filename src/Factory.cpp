@@ -6,10 +6,24 @@ Factory::Factory( void ) {
 }
 
 IOperand const * Factory::createOperand( eOperandType type, std::string const & value ) const {
-	// call appropriate member function
-	// using array of function pointers 
-	// indexed with the enum
-	// return constant pointer to IOperand obect
+	// don't think this will work, treat as placeholder
+	switch( type ){
+	case Int8:
+		return (this->createInt8( value ));
+		break;
+	case Int16:
+		return (this->createInt16( value ));
+		break;
+	case Int32:
+		return (this->createInt32( value ));
+		break;
+	case Float:
+		return (this->createFloat( value ));
+		break;
+	case Double:
+		return (this->createDouble( value ));
+		break;
+	};
 }
 
 IOperand const * Factory::createInt8( std::string const & value ) const {

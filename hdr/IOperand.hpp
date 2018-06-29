@@ -11,8 +11,8 @@ public:
     //virtual int getPrecision( void ) const = 0; // Precision of the type of the instance
     //virtual eOperandType getType( void ) const = 0; // Type of the instance
 
-    //virtual IOperand const * operator+( IOperand const & rhs ) const = 0; // Sum
-    //virtual IOperand const * operator-( IOperand const & rhs ) const = 0; // Difference
+    virtual IOperand const * operator+( IOperand const & rhs ) const = 0; // Sum
+    virtual IOperand const * operator-( IOperand const & rhs ) const = 0; // Difference
     //virtual IOperand const * operator*( IOperand const & rhs ) const = 0; // Product
     //virtual IOperand const * operator/( IOperand const & rhs ) const = 0; // Quotient
     //virtual IOperand const * operator%( IOperand const & rhs ) const = 0; // Modulo
@@ -43,45 +43,35 @@ public:
         return (*ret);
     }
     IOperand const * operator+( IOperand const & rhs ) const {
-        Operator <T> *test;
-        test = new Operator(this->value + std::stoi(rhs.toString()) , "int", 0);
-        //test->value = this->value + std::stoi(rhs.toString());
-        std::cout << test->value << std::endl;
-        return (test);
+        Operator <T> *retObj;
+        retObj = new Operator(this->value + std::stoi(rhs.toString()) , "int", 0);
+        std::cout << retObj->value << std::endl;
+        return (retObj);
     }
-    /*std::string const & toString( void ) const {
-        std::string strVal = std::to_string(this->value);
-        std::cout << strVal << std::endl;
-        return ("50");
-    }*/
-
-
-
-protected:
-
-private:
-
-};
-/*
-class Int8 : public IOperand {
-
-public:
-    char    value;
-    std::string type;
-    int     precision;
-
-protected:
-
-private:
-
-};
-
-class Int16 : public IOperand {
-
-public:
-    short value;
-    std::string type;
-    int     precision;
+    IOperand const * operator-( IOperand const & rhs ) const {
+        Operator <T> *retObj;
+        retObj = new Operator(this->value - std::stoi(rhs.toString()), "int", 0);
+        std::cout << retObj->value << std::endl;
+        return (retObj);
+    }
+    IOperand const * operator*( IOperand const & rhs ) const {
+        Operator <T> *retObj;
+        retObj = new Operator(this->value * std::stoi(rhs.toString()), "int", 0);
+        std::cout << retObj->value << std::endl;
+        return (retObj);
+    }
+    IOperand const * operator/( IOperand const & rhs ) const {
+        Operator <T> *retObj;
+        retObj = new Operator(this->value - std::stoi(rhs.toString()), "int", 0);
+        std::cout << retObj->value << std::endl;
+        return (retObj);
+    }
+    IOperand const * operator%( IOperand const & rhs ) const {
+        Operator <T> *retObj;
+        retObj = new Operator(this->value - std::stoi(rhs.toString()), "int", 0);
+        std::cout << retObj->value << std::endl;
+        return (retObj);
+    }
 
 protected:
 
@@ -89,43 +79,4 @@ private:
 
 };
 
-class Int32 : public IOperand {
-
-public:
-    int value;
-    std::string type;
-    int     precision;
-
-protected:
-
-private:
-
-};
-
-class Float : public IOperand {
-
-public:
-    float value;
-    std::string type;
-    int     precision;
-
-protected:
-
-private:
-
-};
-
-class Double : public IOperand {
-
-public:
-    double value;
-    std::string type;
-    int     precision;
-
-protected:
-
-private:
-
-};
-*/
 #endif
