@@ -9,8 +9,8 @@ These arithmetic expressions are provided to the virtual machine as basic assemb
 - Must handle errors in a non-scalar manner
 
 ## Key components
-- Lexer
-  The Lexer decides whether or not an input file is preset. If not, the program will wait on input from stdin.
+- Lexer<br>
+The Lexer decides whether or not an input file is preset. If not, the program will wait on input from stdin.
 - Parser
 - Stack
 - Factory
