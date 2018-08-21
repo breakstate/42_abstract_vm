@@ -1,4 +1,5 @@
 # 42_abstract_vm
+A 42 / WeThinkCode project
 ## General overview
 AbstractVM is a simple virtual machine that uses a stack to compute simple arithmetic expressions.
 These arithmetic expressions are provided to the virtual machine as basic assembly programs in the form of a file or read from stdin, implemented in C++.
