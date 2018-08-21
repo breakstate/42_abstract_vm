@@ -10,13 +10,13 @@ These arithmetic expressions are provided to the virtual machine as basic assemb
 
 ## Key components
 ### Lexer<br>
-The Lexer decides whether or not an input file is preset. If not, the program will wait on input from stdin. 
-Lines are tokenized within the lexer and unrecognized tokens throw errors
+The Lexer decides whether or not an input file is present. If not, the program will wait on input from stdin. 
+Lines are tokenized within the lexer and unrecognized tokens throw errors. Lexer will report all errors found including on which line the error occurred.
 ### Parser
-The Parser tells the Stack which operations to perform, after having received sanitized input from the Lexer.
+The Parser tells the Stack which operations to perform, after having receiving clean tokens from the Lexer.
 ### Stack class
-The Stack class performs operations on the values within the stack object
+The Stack class performs operations on the values within the stack object.
 ### Factory
-Creates Operand objects based on instructions received from the Stack class
+The factory method creates Operand objects based on instructions received from the Stack class.
 ### Operands
-Inherit from IOperand interface
+Inherits from the given IOperand interface.
